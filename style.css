@@ -73,6 +73,8 @@ section {
     display: none; 
 }
 
+
+
 .home {
     display: flex;
     justify-content: center;
@@ -427,6 +429,9 @@ span {
     .menu-hamburguer {
         display: flex;
     }
+    .home-img {
+        display: none;
+    }
 }
 
 /* Efeito corte suave no menu hamburguer */
@@ -469,30 +474,83 @@ span {
     }
 }
 
-@media (max-widht: 635px) {
-      .home-content h3{
-        font-size: 2.6rem;
-      }
-
-      .home-content h1 {
-        font-size: 5rem;
-      }
-
-      .home-content img {
-        width: 70vw;
-        margin-top: 4rem
-      }
-
-      .serviços h2 {
-     margin-bottom: 3rem;
-
-      }
-
-      .portfolio h2 {
-        margin-bottom: 3rem;
-      }
-
-      .projetos-card {
-    grid-template-columns: repeat(2, 1fr);
-      }
+/* Responsividade para a section home e sobre */
+@media (max-width: 994px) {
+    .home {
+        flex-direction: column;
+        align-items: center;
+        padding: 6rem 2rem 2rem;
+        gap: 2rem;
+    }
+    .home-content {
+        text-align: center;
+        width: 100%;
+    }
+    .home-img img {
+        width: 60vw;
+        max-width: 320px;
+        height: auto;
+        margin: 0 auto;
+        display: block;
+    }
+    .sobre {
+        flex-direction: column;
+        align-items: center;
+        padding: 6rem 2rem 2rem;
+        gap: 2rem;
+    }
+    .about-img img {
+        width: 60vw;
+        max-width: 320px;
+        height: auto;
+        margin: 0 auto 2rem auto;
+        display: block;
+    }
+    .sobre .home-content {
+        text-align: center;
+        width: 100%;
+    }
+    .heading {
+        font-size: 2.5rem;
+    }
+    .home-content h1 {
+        font-size: 3rem;
+    }
+    .home-content h3,
+    .sobre .home-content h3 {
+        font-size: 2rem;
+    }
+    .home-content p,
+    .sobre .home-content p {
+        font-size: 1.7rem;
+        line-height: 1.9;
+        margin-bottom: 1.5rem;
+    }
 }
+
+@media (max-width: 430px) {
+    .home {
+        padding: 4rem 1rem 1rem;
+    }
+    .home-img img,
+    .about-img img {
+        width: 85vw;
+        max-width: 220px;
+    }
+    .home-content h1 {
+        font-size: 2.2rem;
+    }
+    .home-content h3,
+    .sobre .home-content h3 {
+        font-size: 1.3rem;
+    }
+    .home-content p,
+    .sobre .home-content p {
+        font-size: 1.1rem;
+        line-height: 1.5;
+    }
+    .heading {
+        font-size: 2rem;
+    }
+}
+
