@@ -25,6 +25,8 @@ html {
 body {
     background: var(--bg-color);
     color: var(--text-color);
+        overflow-x: hidden;
+
 }
 
 section {
@@ -79,6 +81,7 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }
 
 .home-img img {
