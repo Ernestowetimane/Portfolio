@@ -1,4 +1,17 @@
+document.querySelector('form').addEventListener('submit', function(e) {
+    e.preventDefault();
 
+    const nome = document.querySelector('input[placeholder="Nome"]').value;
+    const email = document.querySelector('input[placeholder="Insira o seu email"]').value;
+    const numero = document.querySelector('input[placeholder="Numero de celular"]').value;
+    const mensagem = document.querySelector('textarea').value;
+
+    // Formata a mensagem para o WhatsApp
+    const texto = `Nome: ${nome}%0AEmail: ${email}%0ANúmero: ${numero}%0AMensagem: ${mensagem}`;
+    const telefone = '258856752762'; // Seu número de Moçambique
+
+        window.open(`https://wa.me/${telefone}?text=${texto}`, '_blank');
+    })
 //Efeito Scrool para aparte de intro do meu site
  ScrollReveal({
      reset: true ,
@@ -22,4 +35,18 @@ const typed = new Typed('.multiple-text',{
     loop: true
 })
 
-//
+const menuHamburguer = document.getElementById('menu-hamburguer');
+const navbar = document.getElementById('navbar');
+
+menuHamburguer.addEventListener('click', () => {
+    menuHamburguer.classList.toggle('active');
+    navbar.classList.toggle('active');
+});
+
+// Fecha o menu ao clicar em qualquer link do navbar
+document.querySelectorAll('#navbar a').forEach(link => {
+    link.addEventListener('click', () => {
+        navbar.classList.remove('active');
+        menuHamburguer.classList.remove('active');
+    });
+});

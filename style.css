@@ -365,14 +365,89 @@ span {
     color: var(--second-bg-color);
 }
 
+/* Menu Hamburguer */
+.menu-hamburguer {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    width: 30px;
+    height: 25px;
+    justify-content: space-between;
+    z-index: 1001;
+}
+.menu-hamburguer span {
+    display: block;
+    height: 4px;
+    width: 100%;
+    background: #fff;
+    border-radius: 2px;
+    transition: 0.4s;
+}
+
+/* Navbar Responsivo */
+@media (max-width: 768px) {
+    .navbar {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        height: 50vh;
+        background: var(--bg-color);
+        width: 100vw;
+        flex-direction: column;
+        align-items: flex-start;
+        box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+        opacity: 0;
+        pointer-events: none;
+        transform: translateY(-100%);
+        transition: opacity 0.4s, transform 0.4s;
+        border-radius: 0 0 24px 24px;
+        z-index: 1000;
+        padding-top: 80px;
+    }
+    .navbar.active {
+        opacity: 1;
+        pointer-events: auto;
+        transform: translateY(0);
+    }
+    .navbar a {
+        display: block; /* Cada link ocupa uma linha */
+        padding: 18px 32px;
+        width: 100%;
+        border-bottom: 1px solid #222;
+        color: var(--text-color);
+        font-weight: 500;
+        transition: background 0.2s;
+        font-size: 2rem;
+        margin-left: 0; /* Remove o espaçamento lateral */
+    }
+    .navbar a:hover {
+        background: var(--second-bg-color);
+    }
+    .menu-hamburguer {
+        display: flex;
+    }
+}
+
+/* Efeito corte suave no menu hamburguer */
+.menu-hamburguer.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+.menu-hamburguer.active span:nth-child(2) {
+    opacity: 0;
+}
+.menu-hamburguer.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+}
+
 /*Pontos que o site quebra*/
-@media (max-widht: 1200px){
+@media (max-width: 1200px){
     html{
         font-size: 55%;
     }
 }
 
-@media (max-widht: 994px) {
+@media (max-width: 994px) {
     .header {
         padding: 2rem 3%;
     }
