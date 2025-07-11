@@ -73,6 +73,8 @@ section {
     display: none; 
 }
 
+
+
 .home {
     display: flex;
     justify-content: center;
@@ -366,13 +368,13 @@ span {
 }
 
 /*Pontos que o site quebra*/
-@media (max-widht: 1200px){
+@media (max-width: 1200px){
     html{
         font-size: 55%;
     }
 }
 
-@media (max-widht: 994px) {
+@media (max-width: 994px) {
     .header {
         padding: 2rem 3%;
     }
@@ -394,7 +396,7 @@ span {
     }
 }
 
-@media (max-widht: 635px) {
+@media (max-width: 635px) {
       .home-content h3{
         font-size: 2.6rem;
       }
@@ -421,3 +423,4 @@ span {
     grid-template-columns: repeat(2, 1fr);
       }
 }
+
