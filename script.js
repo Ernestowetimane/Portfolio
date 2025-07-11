@@ -9,13 +9,13 @@
  });
 
  ScrollReveal().reveal('.home-content, .heading', { origin:'top' });
- ScrollReveal().reveal('.home-img, .serviços-container, .projetos-caixa, .contacto form', { origin:'bootom' });
-  ScrollReveal().reveal('.home-content h1, .about-img', { origin:'left' });
+ ScrollReveal().reveal('.home-img, .serviços-container, .projetos-caixa, .contacto form', { origin:'bottom' });
+  ScrollReveal().reveal('.home-content h1, .about-img', { origin:'bottom' });
   ScrollReveal().reveal('.home-content p, .about-con', { origin:'right' });
 
 //Excrita js
 const typed = new Typed('.multiple-text',{
-    strings: ['Desenvolvedor Front-end', 'Desenvolvedor Front-end', 'Ernesto Vasco Wetimane '],
+    strings: ['Desenvolvedor Front-end', 'Desenvolvedor Front-end',],
     typeSpeed: 100,
     backSpeed: 100,
     backDelay: 1000,
