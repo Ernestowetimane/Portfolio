@@ -86,8 +86,8 @@ section {
 
 .home-img img {
     width: 25vw;
-    border-radius: 14%;
     animation: flutuar 4s ease-in-out infinite;
+    margin-left: 15rem;
 }
 
 @keyframes flutuar {
@@ -137,8 +137,9 @@ span {
     border-radius: 50%;
     font-size: 2rem;
     color: var(--main-color);
-    margin: 3rem 1.5rem 3rem 0;
+    margin: 2rem 1.5rem 3rem 0;
     transition: .5s ease;
+   
 }
 
 .social-media a:hover {
@@ -175,7 +176,8 @@ span {
 
 .about-img img {
     width: 25vw;
-    border-radius: 50%;
+    border-radius: 10%;
+    top: 50rem;
 }
 
 .heading {
@@ -396,7 +398,7 @@ span {
         top: 0;
         right: 0;
         left: 0;
-        height: 50vh;
+        height: 100vh;
         background: var(--bg-color);
         width: 100vw;
         flex-direction: column;
@@ -406,7 +408,6 @@ span {
         pointer-events: none;
         transform: translateY(-100%);
         transition: opacity 0.4s, transform 0.4s;
-        border-radius: 0 0 24px 24px;
         z-index: 1000;
         padding-top: 80px;
     }
@@ -472,6 +473,11 @@ span {
         padding-bottom: 7rem;
     }
 
+    .projetos-caixa{
+        justify-content: center;
+        width: 100%;
+    }
+
     .footer{
         padding: 2rem 3%;
     }
@@ -517,7 +523,7 @@ span {
         font-size: 2.5rem;
     }
     .home-content h1 {
-        font-size: 3rem;
+        font-size: 4rem;
     }
     .home-content h3,
     .sobre .home-content h3 {
@@ -541,19 +547,29 @@ span {
         max-width: 220px;
     }
     .home-content h1 {
-        font-size: 2.2rem;
+        font-size: 2.9rem;
     }
     .home-content h3,
     .sobre .home-content h3 {
-        font-size: 1.3rem;
+        font-size: 1.6rem;
     }
     .home-content p,
     .sobre .home-content p {
-        font-size: 1.1rem;
-        line-height: 1.5;
+        font-size: 1.5rem;
+        line-height: 1.7;
     }
     .heading {
         font-size: 2rem;
     }
+
+    .footer-iconTop a{
+     margin-left: 40rem;
+    }
+
+    .footer-text p{
+        font-size: 1.3rem;
+    }
+
+   
 }
 

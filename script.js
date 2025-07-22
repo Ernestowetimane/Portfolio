@@ -1,7 +1,4 @@
-    document.querySelector('form').addEventListener('submit', function(e) {
-    e.preventDefault();
-
-    document.querySelector('form').addEventListener('submit', function(e) {
+  document.querySelector('form').addEventListener('submit', function(e) {
     e.preventDefault();
 
     const nome = document.querySelector('input[placeholder="Nome"]').value;
@@ -9,14 +6,15 @@
     const numero = document.querySelector('input[placeholder="Numero de celular"]').value;
     const mensagem = document.querySelector('textarea').value;
 
-    })
- 
     // Formata a mensagem para o WhatsApp
     const texto = `Nome: ${nome}%0AEmail: ${email}%0ANúmero: ${numero}%0AMensagem: ${mensagem}`;
     const telefone = '258856752762'; // Seu número de Moçambique
 
         window.open(`https://wa.me/${telefone}?text=${texto}`, '_blank');
     })
+
+    //Limpa os compos do formulario
+    document.querySelector('form').reset();
 //Efeito Scrool para aparte de intro do meu site
  ScrollReveal({
      reset: true ,
